@@ -1,6 +1,8 @@
 module.exports = (app) => {
   const mahasiswa = require('./controller');
 
+  app.get('/', (req, res) => res.send('Selamat datang'));
+
   app.get('/getAllMahasiswa', mahasiswa.getAll);
 
   app.get('/mahasiswa/:nim', mahasiswa.getNIm);
