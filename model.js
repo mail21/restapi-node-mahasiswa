@@ -3,7 +3,7 @@ const koneksi = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'dbaplikasipenilaianmahasiswa',
+  database: 'dbmahasiswa',
 });
 
 koneksi.connect(() => {
