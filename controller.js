@@ -36,12 +36,11 @@ module.exports = {
     );
   },
   delete: (req, res) => {
-    db.query('DELETE from tbmahasiswa WHERE nim = ?', req.params.nim, (err, result) => {
+    db.query(`DELETE from tbmahasiswa WHERE nim=?`, req.params.nim, (err, result) => {
       if (err) {
         console.log(err);
       }
-
-      res.send(`Mahasiswa bernim kan ${nim} Telah berhasil di hapus`);
+      res.send(`Mahasiswa bernim kan ${req.params.nim} Telah berhasil di hapus`);
     });
   },
   getNIm: (req, res) => {
