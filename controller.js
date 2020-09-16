@@ -6,8 +6,6 @@ module.exports = {
       if (err) {
         console.log(err);
       }
-
-      console.log(result[2]);
       res.json(result);
     });
   },
@@ -30,7 +28,6 @@ module.exports = {
         if (err) {
           console.log(err);
         }
-        console.log(result);
         res.send(`Mahasiswa bernim kan ${nim} Telah berhasil di update`);
       }
     );
@@ -47,7 +44,7 @@ module.exports = {
     db.query(`SELECT * FROM tbmahasiswa WHERE nim = ${req.params.nim}`, (err, result) => {
       //if found
       if (result.length) {
-        console.log('result', result.length);
+        // console.log('result', result.length);
         res.json(result);
       }
 
